@@ -4,6 +4,12 @@
 
 This Capstone project is a comprehensive **Fraud Awareness Platform** designed to educate users about various types of frauds, collect and verify fraud reports, and provide interactive features for community engagement. The platform aims to combat fraud by making information accessible and fostering a collaborative environment for sharing insights.
 
+
+## Demo
+
+Experience the live platform here: [https://capstone-web.netlify.app/](https://capstone-web.netlify.app/)
+
+
 ## Features
 
 * **Fraud Statistics Dashboard:** A dynamic **pie chart** visually representing the distribution of frauds across different areas/fields.
@@ -19,10 +25,6 @@ This Capstone project is a comprehensive **Fraud Awareness Platform** designed t
 * **Email Pwned Checker:** Allows users to verify if their email addresses have been compromised in known data breaches.
 * **News Section:** Provides up-to-date information, articles, and alerts related to fraud and cybersecurity.
 * **Quiz Section:** Interactive quizzes to test and enhance users' knowledge about fraud prevention.
-
-## Demo
-
-Experience the live platform here: [https://capstone-web.netlify.app/](https://capstone-web.netlify.app/)
 
 ## Tech Stack
 
