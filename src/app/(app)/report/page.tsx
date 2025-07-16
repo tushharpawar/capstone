@@ -72,81 +72,85 @@ const Page = () => {
     }
     }
   return (
-    <div className="w-screen h-screen">
-      <h1 className=" font-semibold text-xl text-center">Submit form</h1>
-      <div className=" flex justify-center">
-        <div className="w-[70%] flex flex-col justify-center my-3">
-          <div className="flex gap-5 mx-24">
+    <div className="w-full min-h-screen py-6 px-2 bg-background">
+      <h1 className="font-semibold text-xl text-center mb-6">Submit form</h1>
+      <div className="flex justify-center">
+        <form className="w-full max-w-lg flex flex-col gap-4 bg-card p-4 rounded-xl shadow mx-auto">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="w-full">
-              <p>First Name</p>
+              <p className="mb-1">First Name</p>
               <Input
                 placeholder="Enter your first name"
                 type="text"
                 id="first_name"
                 value={firstName}
                 onChange={(e)=>setFirstName(e.target.value)}
-              ></Input>
+                className="w-full"
+              />
             </div>
             <div className="w-full">
-              <p>Last Name</p>
+              <p className="mb-1">Last Name</p>
               <Input
                 placeholder="Enter your last name"
                 type="text"
-                id="first_name"
+                id="last_name"
                 value={lastName}
                 onChange={(e)=>setLastName(e.target.value)}
-              ></Input>
+                className="w-full"
+              />
             </div>
           </div>
 
-          <div className="my-3 mx-24">
-            <p>Email</p>
+          <div>
+            <p className="mb-1">Email</p>
             <Input
               placeholder="example@gmail.com"
               type="email"
-              id="first_name"
+              id="email"
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
-            ></Input>
+              className="w-full"
+            />
           </div>
 
-          <div className="my-3 mx-24">
-            <p>Select type of scam</p>
+          <div>
+            <p className="mb-1">Select type of scam</p>
             <Select onValueChange={handleSelect}>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Types of scams</SelectLabel>
-                <SelectItem value="socialMedia">Social-Media</SelectItem>
-                <SelectItem value="finance">Finanace</SelectItem>
-                <SelectItem value="blackmail">Blackmail</SelectItem>
-                <SelectItem value="other">Others</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Types of scams</SelectLabel>
+                  <SelectItem value="socialMedia">Social-Media</SelectItem>
+                  <SelectItem value="finance">Finance</SelectItem>
+                  <SelectItem value="blackmail">Blackmail</SelectItem>
+                  <SelectItem value="other">Others</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
           </div>
 
-          <div className="my-3 mx-24">
-            <p>Descripstion</p>
+          <div>
+            <p className="mb-1">Description</p>
             <Textarea
-            onChange={(e)=>setDescripstion(e.target.value)}
-            value={description}
-            cols={5}
+              onChange={(e)=>setDescripstion(e.target.value)}
+              value={description}
+              cols={5}
               placeholder="Please write full description.."
-            ></Textarea>
+              className="w-full"
+            />
           </div>
 
-          <div className="my-3 mx-24">
-          <Label htmlFor="file">Upload File for proof</Label>
-          <Input id="file" type="file" />
-        </div>
-
-          <div className="flex justify-center">
-          <Button type="submit" onClick={handleSubmit}>Submit Report</Button>
+          <div>
+            <Label htmlFor="file">Upload File for proof</Label>
+            <Input id="file" type="file" className="w-full" />
           </div>
-        </div>
+
+          <div className="flex justify-center mt-2">
+            <Button type="button" onClick={handleSubmit} className="w-full md:w-auto">Submit Report</Button>
+          </div>
+        </form>
       </div>
     </div>
   );
